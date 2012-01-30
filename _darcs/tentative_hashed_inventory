@@ -1,0 +1,128 @@
+pristine:24cabdfa3a7138ac1994738b4e7fdfd8feba9953a7a4675a02c583d38703b2ac
+Starting with inventory:
+0000000765-92a8d6b20f9261bdf22bdb04d6f467afc74052a3048f09b3227f8141f9fa5e89
+[TAG hledger-web-0.16.5
+Simon Michael <simon@joyful.com>**20111026173211
+ Ignore-this: f917bfcbaa0bd4737bca38033c27a03d
+] 
+hash: 0000000544-da6928ce5d96d4f4d388e416dcf9fccba5dee673e9b30e54dad1ce0b43d50d86
+[site: announcement link
+Simon Michael <simon@joyful.com>**20111101054424
+ Ignore-this: fefaab304ec6bfa1f471fb2c5bd86270
+] 
+hash: 0000000221-cfd848f9914b0d84a0f0bacc874dea70e324907d38f3ea264a0341d4dc2f5ca0
+[site: HCAR entry
+Simon Michael <simon@joyful.com>**20111101054448
+ Ignore-this: d1eaddbe17ef0e01d3325af9ea894ed
+] 
+hash: 0000001840-6adcd1bc6ad1b6cf6476d43556c060c6cc1c736d7f47b7aa1ef0bcf50f59d5c9
+[docs: rewrite prices section
+Simon Michael <simon@joyful.com>**20111208232610
+ Ignore-this: f6cd1c1bfda4e006c0f19f5e3cba7dd5
+] 
+hash: 0000004608-b68dc2307ae5789eff566c675dc746325a6b46662c3ffc2f982c4bd58df5bad4
+[disable tests for non-working clear missing accountname component error message
+Simon Michael <simon@joyful.com>**20111230001238
+ Ignore-this: c84df8be8cece9475d7872d88ae12da3
+] 
+hash: 0000000832-4d6eddf4e1c15c007506a23d18b08923a353f48b3957c65d3361351f0f12bee1
+[Testcase+fix for commodity being reported more than once per account in balance
+Dmitry Astapov <dastapov@gmail.com>**20111225212127
+ Ignore-this: bd662ded81cd5e30d6924af22b75835c
+] 
+hash: 0000001206-40320fdbe6f123890b230369d3324216c8a4589c00248b6031a78fc164daaf2e
+[refactor: clarify mixed amount normalising a bit
+Simon Michael <simon@joyful.com>**20120101003913
+ Ignore-this: df38805e42b3c8148b6b33ba79b608dd
+] 
+hash: 0000005757-643d2adf5997683734bde3b117586a91a022a86862e7f303bf67c9629d1a2a3f
+[web: we can use the main aeson package again
+Simon Michael <simon@joyful.com>**20120102131744
+ Ignore-this: fb6714aea06e99481f4f93ef796ac2c9
+] 
+hash: 0000000263-6381d7d65666b1c3e6f088b0c1508ceb51285ba9c763604e7677a222bb49408d
+[web: needed to escape literal dollar signs in hamlet templates
+Simon Michael <simon@joyful.com>**20120102131912
+ Ignore-this: d4fdfd95b272acbe1772d75d5e88b6b4
+] 
+hash: 0000000586-53fe34a14e0e768eeff5eb167744fc604b99d8565024047afbb1130741c3e1a7
+[true-by-default threaded flag for hledger, allowing non-threaded builds on some debian architectures (Clint Adams)
+Simon Michael <simon@joyful.com>**20120102174243
+ Ignore-this: 7e556983f80e6e5421f1eb1135b46aff
+] 
+hash: 0000000562-e0c4e2d7e8ca1b48c43eb2303d3e0b6dd2c893b83a783557bbfc6dd7b55eed77
+[allow building with cmdargs 0.9
+Simon Michael <simon@joyful.com>**20120102174326
+ Ignore-this: b75c49dab7215020a9edc553b343af3
+] 
+hash: 0000000252-aef3f26797703b3341794a1f10c4057a869ef7d0de8823313412e58e447a7a0f
+[inferred amounts use the cost commodity if known, like ledger (#69)
+Simon Michael <simon@joyful.com>**20120103081548
+ Ignore-this: 5e381f8b105377270cc2bdf4a7cd5e84
+] 
+hash: 0000003382-35c968fb98c26482322510c6e60a3d78a68d9629cef92b5b8295bafb3265ffce
+[docs: I don't think journalCanonicaliseAmounts affects price amounts
+Simon Michael <simon@joyful.com>**20120103081704
+ Ignore-this: 49b6d212e189e83cebffe4ae9960feb4
+] 
+hash: 0000000831-47fc40ef123949373b571e10f1fc2502e6dfb38fcde930b2a75375f8dbdf2f64
+[web: fix $ quoting
+Simon Michael <simon@joyful.com>**20120103104639
+ Ignore-this: 1a6bb747478dbe2ad7d1392401c38f52
+] 
+hash: 0000000546-2e333b979fdfd707b2a88261bfd39298f1c7571ff8b3002dbe3e173201114e7c
+[bump cmdargs upper bound in other places
+Simon Michael <simon@joyful.com>**20120103110035
+ Ignore-this: 1b8a214873f8587d452e40d779b74b52
+] 
+hash: 0000000791-d3d9e80d97dc98b92eba28aac80ea93c336f7f543105c7a6dc1fd3f9a9581c0b
+[less obscure error when the journal file path contains a tilde
+Simon Michael <simon@joyful.com>**20120103121237
+ Ignore-this: d079cb46b54dff6c5a33029b8e420493
+] 
+hash: 0000000593-5b85ff53d577b39fce4d660a1e0fd39ec5037217e8630de6d35a1bfb4ef3e0b3
+[web: prevent flot js error which broke add form fields after adding a transaction (#72)
+Simon Michael <simon@joyful.com>**20120103121422
+ Ignore-this: cf2e9997738293e8d6301f98bb90fc59
+] 
+hash: 0000000628-f7d51acb1f4e6002bb3a916fa3715afd65522b11f23c48d7d20ce5e30ae7e8de
+[web: avoid problematic redirect after submitting the add form
+Simon Michael <simon@joyful.com>**20120103124330
+ Ignore-this: 67ad49d8d24f3178c41f229cb0d1bce
+] 
+hash: 0000001335-fa0afa9b655b0e2ac8811f13a18a8a013ab4ee2164403c7f323d3866227add07
+[fix missing chart regression (#72)
+Simon Michael <simon@joyful.com>**20120103130028
+ Ignore-this: 9776be2ac44c448d79cf091231167b1d
+] 
+hash: 0000000321-d4435cc2181bad2e6493151c15716056a88c347dd5b3ec1c1f10957dd0d4c063
+[web: add form should reject blank account names (#81)
+Simon Michael <simon@joyful.com>**20120104113539
+ Ignore-this: f4ea3b26b5b4a8d1249301b7f3033270
+] 
+hash: 0000000703-efeb95a86c4cc8f4f580f5c7eb3b7992ec9323a7aff0c99d3e0ba07c1a14f69f
+[tools: fix make ghci
+Simon Michael <simon@joyful.com>**20120104120121
+ Ignore-this: 1596c11135e00e27831e9003046f0e41
+] 
+hash: 0000000530-e8849d7383adae9c3734d0bedf0fa36154df1be9097d9b869c6dc76f9192402b
+[support and require latest cmdargs
+Simon Michael <simon@joyful.com>**20120105182515
+ Ignore-this: 3abafeb7985a184f3f3f54affcaea47a
+] 
+hash: 0000001103-1594801e7234a6b821c3bef39673a7d5ff31f8a21e5df995cf2dae2102a93787
+[web: dodge a yesod-core regression breaking add form redirect (#53)
+Simon Michael <simon@joyful.com>**20120112154432
+ Ignore-this: caf62b7b741b5803d0cbca9fbb6588fa
+] 
+hash: 0000000481-36a1f07a884ac59c949c459860797a97ac33d0b6614d886627e970af36a73750
+[parsing: -B/--cost now ignores P historical prices, like ledger
+Simon Michael <simon@joyful.com>**20120122203911
+ Ignore-this: 9522818430f3694818053029cb6b0fb6
+] 
+hash: 0000002293-375dee1aad36a27a367396410506f5604766ee26adc3f105d857a3898125e577
+[docs: clarify transaction prices vs historical prices
+Simon Michael <simon@joyful.com>**20120122215620
+ Ignore-this: 4b3de595b561365b322abdbdb3cbd50e
+] 
+hash: 0000004660-c5b375a23e9f36fa7f025d093db5a2810bbe2dba774428c728a15dc12dab9dc9

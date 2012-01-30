@@ -1,0 +1,284 @@
+/* hledger web ui styles */
+
+/*------------------------------------------------------------------------------------------*/
+/* 1. colours */
+
+/* green */
+body                                                                 { background-color:white; color:black; }
+.registerreport .odd                                                 { background-color:#ded; }
+.journalreport .odd                                                 { background-color:#eee; }
+.filtering                                                           { background-color:#ded; }
+/* #main                                                                { border-color:#ded; } see below */
+/* .journalreport td                                                    { border-color:thin solid #ded; } see below */
+
+/* white */
+/* body                                                                 { background-color:#fff; } */
+/* .registerreport .odd                                                 { background-color:#eee; } */
+/* .filtering                                                           { background-color:#ddd; } */
+/* #main                                                                { border-color:#eee; } see below */
+/* .journalreport td                                                    { border-color:thin solid #eee; } see below */
+
+#message                                                             { color:red; background-color:#fee; }
+#addform input.textinput, #addform .dhx_combo_input, .dhx_combo_list { background-color:#eee; }
+#editform textarea                                                   { background-color:#eee; }
+.negative                                                            { color:#800; }
+.help                                                                {  }
+
+.balancereport .inacct                                               { /*background-color:#ddd;*/ font-weight:bold; }
+.notinacct, .notinacct :link, .notinacct :visited { color:#888; }
+.notinacct .negative { color:#b77; }
+.balancereport .numpostings                                          { padding-left:1em; color:#aaa; }
+.balancereport td.add.mouseover { background-color:rgba(208,208,208,0.5); }
+.balancereport td.journal.mouseover { background-color:rgba(208,208,208,0.5); }
+.balancereport td.journal.mouseover .hoverlinks { visibility:visible; }
+.balancereport td.account.mouseover { background-color:rgba(208,208,208,0.5); }
+.balancereport td.account.mouseover .hoverlinks { visibility:visible; }
+.balancereport .hoverlinks { visibility:hidden; }
+.balancereport .hoverlinks { margin-left:0em; font-weight:normal; /*font-size:smaller;*/ display:inline-block; text-align:right; }
+.balancereport .hoverlinks a { margin-left:0.5em; }
+
+/*------------------------------------------------------------------------------------------*/
+/* 2. font families & sizes */
+/* overspecified for cross-browser robustness */
+body                                               { font-family:helvetica,arial,sans-serif; }
+pre                                                { font-family:courier,"courier new",monospace; }
+input.textinput, .dhx_combo_input, .dhx_combo_list { font-size:small; }
+#editform textarea                                 { font-family:courier,"courier new",monospace; font-size:small; }
+.nav2                                              { font-size:small; }
+#searchform                                        { font-size:small; }
+.topleftlink                                       { font-size:small; }
+.toprightlink                                      { font-size:small; }
+#journaldesc                                       { font-size:small; }
+.togglelink                                        { font-size:smaller; white-space:nowrap }
+.help                                              { font-size:smaller; }
+.form                                              { font-size:small; }
+.journalreport                                     { font-size:small; }
+.balancereport                                     { font-size:small; }
+.registerreport                                    { font-size:small; }
+.showall                                           { font-size:small; }
+/* #addformlink                                    { font-size:small; } */
+/* #editformlink                                   { font-size:small; } */
+#contenttitle                                    { font-size:1.2em; }
+
+/*------------------------------------------------------------------------------------------*/
+/* 3. layout */
+
+body                        { margin:0; }
+#content                    { padding:1em 0 0 0.5em; }
+
+#topbar                     { padding:2px; }
+.topleftlink                { float:left; margin-right:1em; padding:2px; }
+.toprightlink               { float:right; margin-left:1em; padding:2px; }
+#topbar h1                  { display:inline-block; vertical-align:top; margin:0; }
+#journalinfo                { vertical-align:middle; margin:0; }
+/* #topbar                  { padding:4px; border-bottom:2px solid #ddd; } */
+
+#message                    { margin:0.5em;}
+.help                       { font-style: italic; }
+.helprow td                 { padding-bottom:8px; }
+
+#sidebar { float:left; padding-right:1em; margin-bottom:5em; }
+
+#main { overflow:auto; border-left:thin solid #ded; padding-left:1em; }
+
+#navlinks                   { margin-bottom:1em; }
+.navlink                    { }
+.navlinkcurrent             { font-weight:bold; }
+.form                       { margin:0em; }
+
+#searchformdiv              { margin:0 0 1em 0; white-space:nowrap; }
+#searchform                 { margin:0; }
+#searchform span            { padding:4px; }
+#stopfilterlink             { font-weight:bold; }
+.filtering                  { font-weight:bold; }
+
+#main .journal { }
+#main .register { }
+.current                    { font-weight:bold; }
+.date                       { padding-left:0em; }
+.description                { padding-left:1em; white-space:normal; }
+.account                    { padding-left:1em; white-space:normal; }
+.amount                     { padding-left:1em; white-space:nowrap; }
+.balance                    { padding-left:1em; padding-right:0.3em; white-space:nowrap; }
+.amount, .balance { width:2em; }  /* minimise width */
+.positive                   { }
+
+table.journalreport         { border-spacing: 0; }
+.journalreport td           {  }
+.journalreport pre          { margin-top:0; }
+
+.balancereport              { border-spacing:0; }
+.balancereport tr           { vertical-align:bottom; border-spacing:0; }
+.balancereport .title       { white-space:nowrap; }
+.balancereport .item        { }
+.balancereport .depth0      { padding-top:1em; }
+.balancereport td           { padding:0; }
+.totalrule td               { border-top:thin solid black; }
+.balancereport .account     { white-space:nowrap; }
+
+.hidden { display:none; }
+table.registerreport        { border-spacing:0; }
+table.registerreport tr     { vertical-align:top; }
+table.registerreport td     { padding-bottom:0.2em; }
+table.registerreport .date  { white-space:nowrap; }
+table.registerreport tr.posting { font-size:smaller; }
+table.registerreport tr.posting .account  { padding-left:1.5em; }
+table.registerreport tr.posting .amount  { padding-right:0.5em; }
+tr.firstposting td          { }
+tr.newday td                { border-top: 1px solid #797; }
+/* tr.newday .date             { font-weight:bold; } */
+tr.newmonth td              { border-top: 2px solid #464; }
+/* tr.newyear td               { border-top: 3px solid black; } */
+#accountsheading            { white-space:nowrap; }
+
+
+#addform input.textinput, #addform .dhx_combo_input, .dhx_combo_list   { padding:4px; }
+#addform table              { }
+#addform #addbuttonrow      { text-align:right; }
+/* #editform                   { width:95%; } */
+#editform textarea          { width:100%; padding:4px; }
+#searchform table           { border-spacing:0; padding-left:0em; }
+
+
+/*------------------------------------------------------------------------------------------*/
+/* 4. dhtmlx.com auto-completing combo box styles */
+
+.dhx_combo_input{
+/* color:#333333; */
+/* font-family: Arial; */
+/* font-size: 9pt; */
+/* border:0px; */
+/* padding:2px 2px 2px 2px; */
+/* position:absolute; */
+/* top:0px; */
+}
+
+/* table {border:thin solid red} */
+/* div {border:thin solid yellow} */
+
+.dhx_combo_box{
+    position:relative;
+    display:inline-block;
+    /* text-align:left; */
+    /* height:20px; */
+    /* _height:22px; */
+    /* overflow:hidden; */
+    /* background-color: white; */
+}
+
+.dhx_combo_list{
+    position:absolute;
+    z-index:230;
+    overflow-y:auto;
+    overflow-x:hidden;
+    white-space:nowrap;
+    border:1px solid black;
+    height:50%;
+    /* background-color: white; */
+}
+
+.dhx_combo_list div{
+    cursor:default;
+    padding:2px 2px 2px 2px;
+}
+
+.dhx_selected_option{
+    background-color:navy;
+    color:white;
+}
+
+.dhx_combo_img{
+    /* display:none; */
+    width:18px;
+    height:20px;
+    position:absolute;
+    top:12px;
+    right:-10px;
+}
+
+.dhx_combo_option_img{
+	position:relative;
+	top:1px;
+	margin:0px;
+	margin-left:2px;
+	left:0px;
+	width:18px; height:18px;
+}
+
+/* .combo_dhx_sel{ */
+/* .dhx_selected_option{ */
+/*    background-image: url("../static/images/bg_selection.gif") !important; */
+/*    background-position: bottom; */
+/*    background-repeat: repeat-x; */
+/*    color:black; */
+/* } */
+
+
+
+/* .dhx_combo_img_rtl{ */
+/* 	position:absolute; */
+/* 	top:0px; */
+/* 	left:1px; */
+/* 	width:17px; */
+/* 	height:20px; */
+/* } */
+/* .dhx_combo_option_img_rtl{ */
+/* 	float:right; */
+/* 	margin-right :0px; */
+/* 	width:18px; height:18px; */
+/* } */
+
+/* .dhx_combo_list_rtl{ */
+/* 	direction: rtl; */
+/* 	unicode-bidi : bidi-override; */
+/*    position:absolute; */
+/*    z-index:230; */
+/*    overflow-y:auto; */
+/*    overflow-x:hidden; */
+/*    border:1px solid black; */
+/*    height:100px; */
+/*    /\* font-family: Arial; *\/ */
+/*    font-size: 9pt; */
+/*    background-color: white; */
+/* } */
+/* .dhx_combo_list_rtl div{ */
+/* 	direction: rtl; */
+/* 	unicode-bidi : bidi-override; */
+/* 	padding:2px 2px 2px 2px; */
+/* } */
+/* .dhx_combo_list_rtl div div{ */
+/* 	float :right !important; */
+/* 	cursor:default; */
+/* } */
+/* .dhx_combo_list_rtl div img{ */
+/* 	float :right !important; */
+/* } */
+/* .dhx_combo_list_rtl div input{ */
+/* 	float :right !important; */
+/* } */
+
+/* .dhx_combo_box.dhx_skyblue{ */
+/* 	border:1px solid #a4bed4; */
+/* } */
+/* .dhx_combo_box.dhx_skyblue .dhx_combo_input { */
+/* 	font-family:Tahoma; */
+/* 	font-size: 11px; */
+/* 	padding:3px; */
+/* } */
+/* .dhx_combo_list.dhx_skyblue_list{ */
+/* 	background-color: #eaf2fb; */
+/* 	border:1px solid #a4bed4; */
+/* 	font-family:Tahoma; */
+/* 	font-size: 11px; */
+/* } */
+/* .dhx_combo_list.dhx_skyblue_list div{ */
+/* 	cursor:default; */
+/* 	padding:3px 4px; */
+/* } */
+/* .dhx_combo_list_rtl.dhx_skyblue_list{ */
+/*    background-color: #eaf2fb; */
+/* 	border:1px solid #a4bed4; */
+/* 	font-family:Tahoma; */
+/* 	font-size: 11px; */
+/* } */
+

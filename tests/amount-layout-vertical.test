@@ -1,0 +1,100 @@
+# amount layout tests, using default vertical layout
+# 1. print
+bin/hledger -f - print
+<<<
+2010/1/1
+    a  EUR 1  ; a euro
+    b  USD 1  ; a dollar
+    c         ; a euro and a dollar
+>>>
+2010/01/01
+    a         EUR 1  ; a euro
+    b         USD 1  ; a dollar
+             EUR -1                       
+    c        USD -1  ; a euro and a dollar
+
+>>>=0
+
+# 2. register
+bin/hledger -f - register
+<<<
+2010/1/1
+    a  EUR 1  ; a euro
+    b  USD 1  ; a dollar
+    c         ; a euro and a dollar
+>>>
+2010/01/01                      a                             EUR 1        EUR 1
+                                                                           EUR 1
+                                b                             USD 1        USD 1
+                                                             EUR -1             
+                                c                            USD -1            0
+>>>=0
+
+# 3. balance
+bin/hledger -f - balance
+<<<
+2010/1/1
+    a  EUR 1  ; a euro
+    b  USD 1  ; a dollar
+    c         ; a euro and a dollar
+>>>
+               EUR 1  a
+               USD 1  b
+              EUR -1  
+              USD -1  c
+--------------------
+                   0
+>>>=0
+
+# 4. mixed amounts with prices
+# XXX
+# bin/hledger -f - print
+# <<<
+# 2010/1/1
+#     a  EUR 1 @ USD 1.1 ; a euro
+#     b  USD 1  ; a dollar
+#     c         ; a euro and a dollar
+# >>>
+# 2010/01/01
+#     a  EUR 1 @ USD 1.1  ; a euro
+#     b         USD 1  ; a dollar
+#        EUR -1 @ USD 1.1                       
+#     c            USD -1  ; a euro and a dollar
+#
+##
+# 2010/01/01
+#     a  EUR 1 @ USD 1.1  ; a euro
+#     b       USD 1.0  ; a dollar
+#     c      USD -2.1  ; a euro and a dollar
+#
+#>>>=0
+#
+# #
+# bin/hledger -f - register
+# <<<
+# 2010/1/1
+#     a  EUR 1 @ USD 1.1 ; a euro
+#     b  USD 1  ; a dollar
+#     c         ; a euro and a dollar
+# >>>
+# 2010/01/01                      a                             EUR 1        EUR 1
+#                                                                            EUR 1
+#                                 b                           USD 1.0      USD 1.0
+#                                                                            EUR 1
+#                                 c                          USD -2.1     USD -1.1
+#>>>=0
+#
+# #
+# bin/hledger -f - balance
+# <<<
+# 2010/1/1
+#     a  EUR 1 @ USD 1.1 ; a euro
+#     b  USD 1  ; a dollar
+#     c         ; a euro and a dollar
+# >>>
+#                EUR 1  a
+#              USD 1.0  b
+#             USD -2.1  c
+# --------------------
+#                EUR 1
+#             USD -1.1
